@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gch-JW-e7H">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pending Orders-->
+        <scene sceneID="TBS-zg-WlU">
+            <objects>
+                <viewController storyboardIdentifier="PendingOrdersVC" title="Pending Orders" id="6Cu-Nx-rLG" customClass="PassData" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W9G-Ud-PLX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-dm-t4h">
+                                <rect key="frame" x="186" y="248" width="106" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jdd-7T-MGF">
+                                <rect key="frame" x="0.0" y="30" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Pending Orders" id="1vq-qQ-x3V"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="GCT-z8-oJ9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pending Orders" image="folder.fill" catalog="system" id="Wif-eb-ha4"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="cfg-dm-t4h" id="XOi-PM-hrm"/>
+                        <segue destination="WBD-Wb-abt" kind="presentation" identifier="showdetails" modalPresentationStyle="fullScreen" id="xpX-qf-z6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfJ-oE-Ggq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="-50"/>
+        </scene>
+        <!--Submit View Controller-->
+        <scene sceneID="FCR-LR-fWV">
+            <objects>
+                <viewController id="WBD-Wb-abt" customClass="SubmitViewController" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GD2-Pe-lfi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uY9-pu-iiQ">
+                                <rect key="frame" x="0.0" y="29" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Подтвердите заказ" id="cJt-8W-Xkh">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="iZi-NF-WIP">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mfn-FI-Wim">
+                                                <rect key="frame" x="20" y="0.0" width="21" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                                <state key="normal" image="arrowshape.turn.up.left" catalog="system"/>
+                                                <connections>
+                                                    <segue destination="gch-JW-e7H" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" id="J6E-Xd-sp1"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="de0-4f-RCy">
+                                <rect key="frame" x="187" y="359.33333333333331" width="40.333333333333343" height="17.666666666666686"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="headTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x29-xD-QAA">
+                                <rect key="frame" x="40" y="602" width="334" height="54"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <state key="normal" title="Вызвать курьера">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Aq1-2r-5xW" firstAttribute="trailing" secondItem="x29-xD-QAA" secondAttribute="trailing" constant="40" id="4D7-Gt-Xq5"/>
+                            <constraint firstItem="de0-4f-RCy" firstAttribute="centerY" secondItem="GD2-Pe-lfi" secondAttribute="centerY" id="ax7-Y5-Gi1"/>
+                            <constraint firstItem="x29-xD-QAA" firstAttribute="centerX" secondItem="GD2-Pe-lfi" secondAttribute="centerX" id="ehm-un-Ts1"/>
+                            <constraint firstItem="Aq1-2r-5xW" firstAttribute="bottom" secondItem="x29-xD-QAA" secondAttribute="bottom" constant="80" id="n0e-mS-Zmx"/>
+                            <constraint firstItem="de0-4f-RCy" firstAttribute="centerX" secondItem="GD2-Pe-lfi" secondAttribute="centerX" id="qcp-E0-GhI"/>
+                            <constraint firstItem="x29-xD-QAA" firstAttribute="leading" secondItem="Aq1-2r-5xW" secondAttribute="leading" constant="40" id="rQf-9F-Gkp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Aq1-2r-5xW"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblItems" destination="de0-4f-RCy" id="Vpp-zn-LhB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLM-h0-lyf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302.89855072463769" y="-206.25000000000003"/>
+        </scene>
+        <!--Add Orders-->
+        <scene sceneID="Og1-sP-KPB">
+            <objects>
+                <viewController storyboardIdentifier="AddOrdersVC" title="Add Orders" id="a5x-EM-aoY" customClass="GetData" customModule="Grocery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OF6-d0-9Th">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tMl-00-KQ7">
+                                <rect key="frame" x="75" y="200" width="264" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="R3c-yX-edB"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6I-0s-qff">
+                                <rect key="frame" x="40" y="440" width="334" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1Wn-qJ-RlP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Add Order">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="click:" destination="bxZ-cW-NOD" eventType="touchUpInside" id="7vQ-46-NWa"/>
+                                    <action selector="done:" destination="a5x-EM-aoY" eventType="touchUpInside" id="7TW-do-CUI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter an Order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zf4-YW-Caq">
+                                <rect key="frame" x="20" y="80" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IKi-4B-IG6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="u6I-0s-qff" firstAttribute="top" secondItem="tMl-00-KQ7" secondAttribute="bottom" constant="90" id="5tm-B0-fMx"/>
+                            <constraint firstItem="tMl-00-KQ7" firstAttribute="top" secondItem="flA-zq-Hip" secondAttribute="top" constant="200" id="6Go-WI-LZS"/>
+                            <constraint firstItem="flA-zq-Hip" firstAttribute="trailing" secondItem="zf4-YW-Caq" secondAttribute="trailing" constant="20" id="Ad8-p7-pNc"/>
+                            <constraint firstItem="zf4-YW-Caq" firstAttribute="leading" secondItem="flA-zq-Hip" secondAttribute="leading" constant="20" id="Clk-th-mGd"/>
+                            <constraint firstItem="flA-zq-Hip" firstAttribute="trailing" secondItem="u6I-0s-qff" secondAttribute="trailing" constant="40" id="EZs-yu-p8Q"/>
+                            <constraint firstItem="flA-zq-Hip" firstAttribute="trailing" secondItem="tMl-00-KQ7" secondAttribute="trailing" constant="75" id="ajV-aN-pMZ"/>
+                            <constraint firstItem="zf4-YW-Caq" firstAttribute="top" secondItem="flA-zq-Hip" secondAttribute="top" constant="80" id="bAX-RC-0iJ"/>
+                            <constraint firstItem="u6I-0s-qff" firstAttribute="leading" secondItem="flA-zq-Hip" secondAttribute="leading" constant="40" id="xtO-Oi-Xqi"/>
+                            <constraint firstItem="tMl-00-KQ7" firstAttribute="leading" secondItem="flA-zq-Hip" secondAttribute="leading" constant="75" id="zrh-dx-eDK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="flA-zq-Hip"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Order" image="plus" catalog="system" id="LI1-3a-Pos"/>
+                    <connections>
+                        <outlet property="textField" destination="tMl-00-KQ7" id="PI5-jb-zj9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Io-k4-dCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bxZ-cW-NOD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-636.23188405797111" y="-990.40178571428567"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="EgH-UD-Jpc">
+            <objects>
+                <tabBarController storyboardIdentifier="ManagerVC" id="gch-JW-e7H" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qhh-b0-0Re">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Cu-Nx-rLG" kind="relationship" relationship="viewControllers" id="WEd-2w-dAc"/>
+                        <segue destination="a5x-EM-aoY" kind="relationship" relationship="viewControllers" id="OgU-pV-DIu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vAs-lN-APc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1554" y="-666"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
+        <image name="folder.fill" catalog="system" width="128" height="95"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
+</document>
